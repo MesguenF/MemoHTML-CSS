@@ -46,6 +46,35 @@
         th {
             background: #f4f4f4;
         }
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            table, th, td {
+                display: block;
+                width: 100%;
+            }
+            th {
+                background: none;
+                font-weight: bold;
+            }
+            td {
+                display: block;
+                text-align: right;
+                border-bottom: 1px solid #ddd;
+                position: relative;
+                padding-left: 50%;
+            }
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
     </style>
 </head>
 <body>
@@ -63,22 +92,70 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>&lt;html&gt;</td><td>Élément racine de tout document HTML</td></tr>
-                    <tr><td>&lt;head&gt;</td><td>Contient les métadonnées, les liens vers les feuilles de style, etc.</td></tr>
-                    <tr><td>&lt;title&gt;</td><td>Définit le titre du document affiché dans l'onglet du navigateur</td></tr>
-                    <tr><td>&lt;base&gt;</td><td>Spécifie l'URL de base pour les URL relatives dans un document</td></tr>
-                    <tr><td>&lt;link&gt;</td><td>Relie le document à une ressource externe</td></tr>
-                    <tr><td>&lt;meta&gt;</td><td>Définit des métadonnées à propos du document HTML</td></tr>
-                    <tr><td>&lt;style&gt;</td><td>Contient des informations de style pour un document</td></tr>
-                    <tr><td>&lt;body&gt;</td><td>Contient le contenu principal du document</td></tr>
-                    <tr><td>&lt;header&gt;</td><td>Contient les en-têtes de sections ou de la page</td></tr>
-                    <tr><td>&lt;footer&gt;</td><td>Contient le pied de page de sections ou de la page</td></tr>
-                    <tr><td>&lt;section&gt;</td><td>Définit des sections générales dans le document</td></tr>
-                    <tr><td>&lt;article&gt;</td><td>Définit du contenu autonome</td></tr>
-                    <tr><td>&lt;nav&gt;</td><td>Contient les liens de navigation</td></tr>
-                    <tr><td>&lt;aside&gt;</td><td>Contient du contenu marginal, souvent utilisé pour les barres latérales</td></tr>
-                    <tr><td>&lt;main&gt;</td><td>Contient le contenu principal d'un document</td></tr>
-                    <tr><td>&lt;div&gt;</td><td>Élément générique de conteneur sans signification sémantique</td></tr>
+                    <tr>
+                        <td data-label="Balise">&lt;html&gt;</td>
+                        <td data-label="Description">Élément racine de tout document HTML</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;head&gt;</td>
+                        <td data-label="Description">Contient les métadonnées, les liens vers les feuilles de style, etc.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;title&gt;</td>
+                        <td data-label="Description">Définit le titre du document affiché dans l'onglet du navigateur</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;base&gt;</td>
+                        <td data-label="Description">Spécifie l'URL de base pour les URL relatives dans un document</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;link&gt;</td>
+                        <td data-label="Description">Relie le document à une ressource externe</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;meta&gt;</td>
+                        <td data-label="Description">Définit des métadonnées à propos du document HTML</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;style&gt;</td>
+                        <td data-label="Description">Contient des informations de style pour un document</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;body&gt;</td>
+                        <td data-label="Description">Contient le contenu principal du document</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;header&gt;</td>
+                        <td data-label="Description">Contient les en-têtes de sections ou de la page</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;footer&gt;</td>
+                        <td data-label="Description">Contient le pied de page de sections ou de la page</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;section&gt;</td>
+                        <td data-label="Description">Définit des sections générales dans le document</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;article&gt;</td>
+                        <td data-label="Description">Définit du contenu autonome</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;nav&gt;</td>
+                        <td data-label="Description">Contient les liens de navigation</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;aside&gt;</td>
+                        <td data-label="Description">Contient du contenu marginal, souvent utilisé pour les barres latérales</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;main&gt;</td>
+                        <td data-label="Description">Contient le contenu principal d'un document</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;div&gt;</td>
+                        <td data-label="Description">Élément générique de conteneur sans signification sémantique</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
@@ -92,39 +169,110 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>&lt;h1&gt; à &lt;h6&gt;</td><td>Définit les titres, &lt;h1&gt; étant le plus important</td></tr>
-                    <tr><td>&lt;p&gt;</td><td>Définit un paragraphe</td></tr>
-                    <tr><td>&lt;a&gt;</td><td>Définit un hyperlien</td></tr>
-                    <tr><td>&lt;span&gt;</td><td>Conteneur en ligne générique sans signification sémantique</td></tr>
-                    <tr><td>&lt;strong&gt;</td><td>Texte important, généralement affiché en gras</td></tr>
-                    <tr><td>&lt;em&gt;</td><td>Texte accentué, généralement affiché en italique</td></tr>
-                    <tr><td>&lt;br&gt;</td><td>Saut de ligne</td></tr>
-                    <tr><td>&lt;hr&gt;</td><td>Séparateur thématique (ligne horizontale)</td></tr>
-                    <tr><td>&lt;blockquote&gt;</td><td>Citation longue</td></tr>
-                    <tr><td>&lt;cite&gt;</td><td>Titre d'une œuvre</td></tr>
-                    <tr><td>&lt;q&gt;</td><td>Citation courte</td></tr>
-                    <tr><td>&lt;abbr&gt;</td><td>Abréviation</td></tr>
-                    <tr><td>&lt;address&gt;</td><td>Informations de contact</td></tr>
-                    <tr><td>&lt;b&gt;</td><td>Texte en gras sans importance particulière</td></tr>
-                    <tr><td>&lt;i&gt;</td><td>Texte en italique sans importance particulière</td></tr>
-                    <tr><td>&lt;small&gt;</td><td>Texte de petite taille</td></tr>
-                    <tr><td>&lt;sub&gt;</td><td>Texte en indice</td></tr>
-                    <tr><td>&lt;sup&gt;</td><td>Texte en exposant</td></tr>
-                    <tr><td>&lt;u&gt;</td><td>Texte souligné</td></tr>
-                    <tr><td>&lt;del&gt;</td><td>Texte supprimé</td></tr>
-                    <tr><td>&lt;ins&gt;</td><td>Texte inséré</td></tr>
-                    <tr><td>&lt;bdi&gt;</td><td>Isoler une partie du texte pour qu'elle soit formatée indépendamment du texte environnant</td></tr>
-                    <tr><td>&lt;bdo&gt;</td><td>Surcharge de la direction du texte</td></tr>
-                    <tr><td>&lt;code&gt;</td><td>Affiche du texte préformaté pour le code source</td></tr>
-                    <tr><td>&lt;pre&gt;</td><td>Texte préformaté avec espacement conservé</td></tr>
-                    <tr><td>&lt;var&gt;</td><td>Définit une variable dans une expression mathématique ou de programmation</td></tr>
-                    <tr><td>&lt;kbd&gt;</td><td>Indique une entrée de clavier</td></tr>
-                    <tr><td>&lt;samp&gt;</td><td>Définit la sortie d'un programme informatique</td></tr>
-                    <tr><td>&lt;time&gt;</td><td>Représente une date ou une heure</td></tr>
-                    <tr><td>&lt;mark&gt;</td><td>Met en évidence du texte</td></tr>
-                    <tr><td>&lt;ruby&gt;</td><td>Annotation ruby pour les scripts de l'Asie de l'Est</td></tr>
-                    <tr><td>&lt;rt&gt;</td><td>Annotation de texte pour &lt;ruby&gt;</td></tr>
-                    <tr><td>&lt;rp&gt;</td><td>Parenthèses pour annotations ruby</td></tr>
+                    <tr>
+                        <td data-label="Balise">&lt;h1&gt; à &lt;h6&gt;</td>
+                        <td data-label="Description">Définit les titres, &lt;h1&gt; étant le plus important</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;p&gt;</td>
+                        <td data-label="Description">Définit un paragraphe</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;a&gt;</td>
+                        <td data-label="Description">Définit un hyperlien</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;span&gt;</td>
+                        <td data-label="Description">Conteneur en ligne générique sans signification sémantique</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;strong&gt;</td>
+                        <td data-label="Description">Texte important, généralement affiché en gras</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;em&gt;</td>
+                        <td data-label="Description">Texte accentué, généralement affiché en italique</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;br&gt;</td>
+                        <td data-label="Description">Saut de ligne</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;hr&gt;</td>
+                        <td data-label="Description">Séparateur thématique (ligne horizontale)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;blockquote&gt;</td>
+                        <td data-label="Description">Citation longue</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;cite&gt;</td>
+                        <td data-label="Description">Titre d'une œuvre</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;q&gt;</td>
+                        <td data-label="Description">Citation courte</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;abbr&gt;</td>
+                        <td data-label="Description">Abréviation</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;address&gt;</td>
+                        <td data-label="Description">Informations de contact</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;b&gt;</td>
+                        <td data-label="Description">Texte en gras sans importance particulière</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;i&gt;</td>
+                        <td data-label="Description">Texte en italique sans importance particulière</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;small&gt;</td>
+                        <td data-label="Description">Texte plus petit</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;sub&gt;</td>
+                        <td data-label="Description">Texte en indice</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;sup&gt;</td>
+                        <td data-label="Description">Texte en exposant</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;code&gt;</td>
+                        <td data-label="Description">Fragment de code</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;pre&gt;</td>
+                        <td data-label="Description">Texte préformaté</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;var&gt;</td>
+                        <td data-label="Description">Définit une variable</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;samp&gt;</td>
+                        <td data-label="Description">Sortie de programme</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;kbd&gt;</td>
+                        <td data-label="Description">Entrée clavier</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;mark&gt;</td>
+                        <td data-label="Description">Met en évidence du texte</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;del&gt;</td>
+                        <td data-label="Description">Texte supprimé</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;ins&gt;</td>
+                        <td data-label="Description">Texte inséré</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
@@ -138,17 +286,50 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>&lt;img&gt;</td><td>Intègre une image</td></tr>
-                    <tr><td>&lt;audio&gt;</td><td>Intègre du contenu audio</td></tr>
-                    <tr><td>&lt;video&gt;</td><td>Intègre du contenu vidéo</td></tr>
-                    <tr><td>&lt;source&gt;</td><td>Spécifie des sources alternatives pour les éléments &lt;audio&gt; et &lt;video&gt;</td></tr>
-                    <tr><td>&lt;track&gt;</td><td>Spécifie des pistes textuelles pour les éléments &lt;audio&gt; et &lt;video&gt;</td></tr>
-                    <tr><td>&lt;canvas&gt;</td><td>Conteneur pour graphiques dessinés avec JavaScript</td></tr>
-                    <tr><td>&lt;svg&gt;</td><td>Définit des graphiques vectoriels en SVG</td></tr>
-                    <tr><td>&lt;map&gt;</td><td>Définit une carte d'image</td></tr>
-                    <tr><td>&lt;area&gt;</td><td>Définit une zone sur une carte d'image</td></tr>
-                    <tr><td>&lt;figcaption&gt;</td><td>Légende d'un élément &lt;figure&gt;</td></tr>
-                    <tr><td>&lt;figure&gt;</td><td>Conteneur pour du contenu illustratif (images, diagrammes, etc.)</td></tr>
+                    <tr>
+                        <td data-label="Balise">&lt;img&gt;</td>
+                        <td data-label="Description">Intègre une image</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;audio&gt;</td>
+                        <td data-label="Description">Intègre du contenu audio</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;video&gt;</td>
+                        <td data-label="Description">Intègre du contenu vidéo</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;source&gt;</td>
+                        <td data-label="Description">Spécifie des sources alternatives pour les éléments &lt;audio&gt; et &lt;video&gt;</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;track&gt;</td>
+                        <td data-label="Description">Spécifie des pistes textuelles pour les éléments &lt;audio&gt; et &lt;video&gt;</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;canvas&gt;</td>
+                        <td data-label="Description">Conteneur pour graphiques dessinés avec JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;svg&gt;</td>
+                        <td data-label="Description">Définit des graphiques vectoriels en SVG</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;map&gt;</td>
+                        <td data-label="Description">Définit une carte d'image</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;area&gt;</td>
+                        <td data-label="Description">Définit une zone sur une carte d'image</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;figcaption&gt;</td>
+                        <td data-label="Description">Légende d'un élément &lt;figure&gt;</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;figure&gt;</td>
+                        <td data-label="Description">Conteneur pour du contenu illustratif (images, diagrammes, etc.)</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
@@ -162,20 +343,62 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>&lt;form&gt;</td><td>Conteneur pour les éléments de formulaire</td></tr>
-                    <tr><td>&lt;input&gt;</td><td>Champ de saisie générique</td></tr>
-                    <tr><td>&lt;textarea&gt;</td><td>Zone de texte multiligne</td></tr>
-                    <tr><td>&lt;button&gt;</td><td>Bouton cliquable</td></tr>
-                    <tr><td>&lt;select&gt;</td><td>Liste déroulante</td></tr>
-                    <tr><td>&lt;option&gt;</td><td>Élément d'une liste déroulante</td></tr>
-                    <tr><td>&lt;label&gt;</td><td>Étiquette pour un élément de formulaire</td></tr>
-                    <tr><td>&lt;fieldset&gt;</td><td>Groupe de champs de formulaire</td></tr>
-                    <tr><td>&lt;legend&gt;</td><td>Légende pour un &lt;fieldset&gt;</td></tr>
-                    <tr><td>&lt;datalist&gt;</td><td>Liste de données prédéfinies pour les champs de saisie</td></tr>
-                    <tr><td>&lt;output&gt;</td><td>Résultat d'un calcul</td></tr>
-                    <tr><td>&lt;progress&gt;</td><td>Barre de progression</td></tr>
-                    <tr><td>&lt;meter&gt;</td><td>Indicateur de mesure</td></tr>
-                    <tr><td>&lt;optgroup&gt;</td><td>Groupe d'options dans une liste déroulante</td></tr>
+                    <tr>
+                        <td data-label="Balise">&lt;form&gt;</td>
+                        <td data-label="Description">Conteneur pour les éléments de formulaire</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;input&gt;</td>
+                        <td data-label="Description">Champ de saisie générique</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;textarea&gt;</td>
+                        <td data-label="Description">Zone de texte multiligne</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;button&gt;</td>
+                        <td data-label="Description">Bouton cliquable</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;select&gt;</td>
+                        <td data-label="Description">Liste déroulante</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;option&gt;</td>
+                        <td data-label="Description">Élément d'une liste déroulante</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;label&gt;</td>
+                        <td data-label="Description">Étiquette pour un élément de formulaire</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;fieldset&gt;</td>
+                        <td data-label="Description">Groupe de champs de formulaire</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;legend&gt;</td>
+                        <td data-label="Description">Légende pour un &lt;fieldset&gt;</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;datalist&gt;</td>
+                        <td data-label="Description">Liste de données prédéfinies pour les champs de saisie</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;output&gt;</td>
+                        <td data-label="Description">Résultat d'un calcul</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;progress&gt;</td>
+                        <td data-label="Description">Barre de progression</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;meter&gt;</td>
+                        <td data-label="Description">Indicateur de mesure</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;optgroup&gt;</td>
+                        <td data-label="Description">Groupe d'options dans une liste déroulante</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
@@ -189,56 +412,52 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>&lt;table&gt;</td><td>Conteneur de tableau</td></tr>
-                    <tr><td>&lt;caption&gt;</td><td>Légende d'un tableau</td></tr>
-                    <tr><td>&lt;thead&gt;</td><td>Regroupe l'en-tête d'un tableau</td></tr>
-                    <tr><td>&lt;tbody&gt;</td><td>Regroupe le corps d'un tableau</td></tr>
-                    <tr><td>&lt;tfoot&gt;</td><td>Regroupe le pied d'un tableau</td></tr>
-                    <tr><td>&lt;tr&gt;</td><td>Ligne de tableau</td></tr>
-                    <tr><td>&lt;th&gt;</td><td>Cellule d'en-tête</td></tr>
-                    <tr><td>&lt;td&gt;</td><td>Cellule de données</td></tr>
-                    <tr><td>&lt;col&gt;</td><td>Spécifie des propriétés de colonne pour chaque colonne dans un &lt;colgroup&gt;</td></tr>
-                    <tr><td>&lt;colgroup&gt;</td><td>Spécifie un groupe de colonnes dans un tableau</td></tr>
-                </tbody>
-            </table>
-        </section>
-        <section>
-            <h2>Éléments sémantiques</h2>
-            <table>
-                <thead>
                     <tr>
-                        <th>Balise</th>
-                        <th>Description</th>
+                        <td data-label="Balise">&lt;table&gt;</td>
+                        <td data-label="Description">Conteneur de tableau</td>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr><td>&lt;time&gt;</td><td>Représente une date ou une heure</td></tr>
-                    <tr><td>&lt;mark&gt;</td><td>Met en évidence du texte</td></tr>
-                    <tr><td>&lt;summary&gt;</td><td>Résumé pour un élément &lt;details&gt;</td></tr>
-                    <tr><td>&lt;details&gt;</td><td>Contenu que l'utilisateur peut afficher ou masquer</td></tr>
-                    <tr><td>&lt;data&gt;</td><td>Associe une valeur machine-readable avec du contenu</td></tr>
-                </tbody>
-            </table>
-        </section>
-        <section>
-            <h2>Éléments interactifs</h2>
-            <table>
-                <thead>
                     <tr>
-                        <th>Balise</th>
-                        <th>Description</th>
+                        <td data-label="Balise">&lt;caption&gt;</td>
+                        <td data-label="Description">Légende d'un tableau</td>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr><td>&lt;dialog&gt;</td><td>Fenêtre de dialogue modale ou non modale</td></tr>
-                    <tr><td>&lt;menu&gt;</td><td>Liste de commandes ou de contrôles</td></tr>
-                    <tr><td>&lt;menuitem&gt;</td><td>Élément d'un menu contextuel</td></tr>
+                    <tr>
+                        <td data-label="Balise">&lt;thead&gt;</td>
+                        <td data-label="Description">Regroupe l'en-tête d'un tableau</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;tbody&gt;</td>
+                        <td data-label="Description">Regroupe le corps d'un tableau</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;tfoot&gt;</td>
+                        <td data-label="Description">Regroupe le pied d'un tableau</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;tr&gt;</td>
+                        <td data-label="Description">Ligne de tableau</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;th&gt;</td>
+                        <td data-label="Description">Cellule d'en-tête</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;td&gt;</td>
+                        <td data-label="Description">Cellule de données</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;col&gt;</td>
+                        <td data-label="Description">Définit des propriétés de colonne</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Balise">&lt;colgroup&gt;</td>
+                        <td data-label="Description">Groupe de colonnes</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Mémo HTML5</p>
+        <p>&copy; 2024 Mémo HTML5. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
