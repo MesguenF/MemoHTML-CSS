@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 
+    Balises Meta et Viewport : Utilisation de <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    pour garantir que la page s'adapte à la largeur de l'écran.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exemple Formulaire</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+		<header>
+			<h1>Exemple formulaire</h1>
+			<a href="MemoHTML.html">Retour vers page principale</a>
+		</header>
+			<section>
+				<article>
+					<form method="post" action="form.php">
+					  <div class="champ">
+					    <label for="pseudo">Entrez un pseudonyme : </label>
+					    <input type="text" id="pseudo" name="pseudo">
+					  </div>
+					  <div class="champ">
+					    <label for="pass">Entrez un mot de passe :</label>
+					    <input type="password" id="pass" name="pass">
+					  </div>
+					  <div class="champ">
+					    <label for="mail">Entrez un mail :</label>
+					    <input type="email" id="mail" name="mail">
+					  </div>
+					  <div class="champ">
+					    <input type="submit" value="Envoyer">
+					   </div>
+					</form>
+				</article>
+				<article>
+					<br>
+					<img src="CaptureFormulaire.jpg">
+				</article>
+			</section>
+</body>
+</html>
