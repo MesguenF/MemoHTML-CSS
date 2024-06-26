@@ -8,79 +8,7 @@
     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mémo HTML5</title>
-    <!-- Utilisation de media queries pour ajuster la mise en page sur les petits écrans.-->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-        }
-        header, footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-        }
-        main {
-            padding: 1em;
-            max-width: 1200px;
-            margin: 0 auto;
-            background: #fff;
-        }
-        section {
-            margin-bottom: 2em;
-        }
-        h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 0.5em;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 1em;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 0.5em;
-            text-align: left;
-        }
-        th {
-            background: #f4f4f4;
-        }
-        @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-            table, th, td {
-                display: block;
-                width: 100%;
-            }
-            th {
-                background: none;
-                font-weight: bold;
-            }
-            td {
-                display: block;
-                text-align: right;
-                border-bottom: 1px solid #ddd;
-                position: relative;
-                padding-left: 50%;
-            }
-            td::before {
-                content: attr(data-label);
-                position: absolute;
-                left: 0;
-                width: 50%;
-                padding-left: 10px;
-                font-weight: bold;
-                text-align: left;
-            }
-        }
-    </style>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <header>
@@ -463,6 +391,16 @@
                     </tr>
                 </tbody>
             </table>
+        </section>
+        <section>
+            <h2>Exemples</h2>
+            <ul>
+			    <li><a href="Listes.html">Listes</a></li>
+                <li><a href="Formulaire.html">Formulaire</a></li>
+			    <li><a href="Tableau.html">Tableau</a></li>
+			    <li><a href="ProprietesCSS.html">Propriétés CSS</a></li>
+			  </ul>
+            
         </section>
     </main>
     <footer>
