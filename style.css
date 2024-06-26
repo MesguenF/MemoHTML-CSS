@@ -6,7 +6,7 @@ body {
     background: #f4f4f4;
 }
 header, footer {
-    background: #333;
+    background: #c0aaaa;
     color: #fff;
     text-align: center;
     padding: 1em 0;
@@ -15,7 +15,7 @@ main {
     padding: 1em;
     max-width: 1200px;
     margin: 0 auto;
-    background: #fff;
+    background: #f3f1f1;
 }
 section {
     margin-bottom: 2em;
