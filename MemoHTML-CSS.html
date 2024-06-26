@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mémo HTML5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        header, footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        main {
+            padding: 1em;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+        }
+        section {
+            margin-bottom: 2em;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1em;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 0.5em;
+            text-align: left;
+        }
+        th {
+            background: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mémo HTML5</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Éléments de structure</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>&lt;html&gt;</td><td>Élément racine de tout document HTML</td></tr>
+                    <tr><td>&lt;head&gt;</td><td>Contient les métadonnées, les liens vers les feuilles de style, etc.</td></tr>
+                    <tr><td>&lt;title&gt;</td><td>Définit le titre du document affiché dans l'onglet du navigateur</td></tr>
+                    <tr><td>&lt;base&gt;</td><td>Spécifie l'URL de base pour les URL relatives dans un document</td></tr>
+                    <tr><td>&lt;link&gt;</td><td>Relie le document à une ressource externe</td></tr>
+                    <tr><td>&lt;meta&gt;</td><td>Définit des métadonnées à propos du document HTML</td></tr>
+                    <tr><td>&lt;style&gt;</td><td>Contient des informations de style pour un document</td></tr>
+                    <tr><td>&lt;body&gt;</td><td>Contient le contenu principal du document</td></tr>
+                    <tr><td>&lt;header&gt;</td><td>Contient les en-têtes de sections ou de la page</td></tr>
+                    <tr><td>&lt;footer&gt;</td><td>Contient le pied de page de sections ou de la page</td></tr>
+                    <tr><td>&lt;section&gt;</td><td>Définit des sections générales dans le document</td></tr>
+                    <tr><td>&lt;article&gt;</td><td>Définit du contenu autonome</td></tr>
+                    <tr><td>&lt;nav&gt;</td><td>Contient les liens de navigation</td></tr>
+                    <tr><td>&lt;aside&gt;</td><td>Contient du contenu marginal, souvent utilisé pour les barres latérales</td></tr>
+                    <tr><td>&lt;main&gt;</td><td>Contient le contenu principal d'un document</td></tr>
+                    <tr><td>&lt;div&gt;</td><td>Élément générique de conteneur sans signification sémantique</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Éléments de texte</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>&lt;h1&gt; à &lt;h6&gt;</td><td>Définit les titres, &lt;h1&gt; étant le plus important</td></tr>
+                    <tr><td>&lt;p&gt;</td><td>Définit un paragraphe</td></tr>
+                    <tr><td>&lt;a&gt;</td><td>Définit un hyperlien</td></tr>
+                    <tr><td>&lt;span&gt;</td><td>Conteneur en ligne générique sans signification sémantique</td></tr>
+                    <tr><td>&lt;strong&gt;</td><td>Texte important, généralement affiché en gras</td></tr>
+                    <tr><td>&lt;em&gt;</td><td>Texte accentué, généralement affiché en italique</td></tr>
+                    <tr><td>&lt;br&gt;</td><td>Saut de ligne</td></tr>
+                    <tr><td>&lt;hr&gt;</td><td>Séparateur thématique (ligne horizontale)</td></tr>
+                    <tr><td>&lt;blockquote&gt;</td><td>Citation longue</td></tr>
+                    <tr><td>&lt;cite&gt;</td><td>Titre d'une œuvre</td></tr>
+                    <tr><td>&lt;q&gt;</td><td>Citation courte</td></tr>
+                    <tr><td>&lt;abbr&gt;</td><td>Abréviation</td></tr>
+                    <tr><td>&lt;address&gt;</td><td>Informations de contact</td></tr>
+                    <tr><td>&lt;b&gt;</td><td>Texte en gras sans importance particulière</td></tr>
+                    <tr><td>&lt;i&gt;</td><td>Texte en italique sans importance particulière</td></tr>
+                    <tr><td>&lt;small&gt;</td><td>Texte de petite taille</td></tr>
+                    <tr><td>&lt;sub&gt;</td><td>Texte en indice</td></tr>
+                    <tr><td>&lt;sup&gt;</td><td>Texte en exposant</td></tr>
+                    <tr><td>&lt;u&gt;</td><td>Texte souligné</td></tr>
+                    <tr><td>&lt;del&gt;</td><td>Texte supprimé</td></tr>
+                    <tr><td>&lt;ins&gt;</td><td>Texte inséré</td></tr>
+                    <tr><td>&lt;bdi&gt;</td><td>Isoler une partie du texte pour qu'elle soit formatée indépendamment du texte environnant</td></tr>
+                    <tr><td>&lt;bdo&gt;</td><td>Surcharge de la direction du texte</td></tr>
+                    <tr><td>&lt;code&gt;</td><td>Affiche du texte préformaté pour le code source</td></tr>
+                    <tr><td>&lt;pre&gt;</td><td>Texte préformaté avec espacement conservé</td></tr>
+                    <tr><td>&lt;var&gt;</td><td>Définit une variable dans une expression mathématique ou de programmation</td></tr>
+                    <tr><td>&lt;kbd&gt;</td><td>Indique une entrée de clavier</td></tr>
+                    <tr><td>&lt;samp&gt;</td><td>Définit la sortie d'un programme informatique</td></tr>
+                    <tr><td>&lt;time&gt;</td><td>Représente une date ou une heure</td></tr>
+                    <tr><td>&lt;mark&gt;</td><td>Met en évidence du texte</td></tr>
+                    <tr><td>&lt;ruby&gt;</td><td>Annotation ruby pour les scripts de l'Asie de l'Est</td></tr>
+                    <tr><td>&lt;rt&gt;</td><td>Annotation de texte pour &lt;ruby&gt;</td></tr>
+                    <tr><td>&lt;rp&gt;</td><td>Parenthèses pour annotations ruby</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Éléments multimédias</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>&lt;img&gt;</td><td>Intègre une image</td></tr>
+                    <tr><td>&lt;audio&gt;</td><td>Intègre du contenu audio</td></tr>
+                    <tr><td>&lt;video&gt;</td><td>Intègre du contenu vidéo</td></tr>
+                    <tr><td>&lt;source&gt;</td><td>Spécifie des sources alternatives pour les éléments &lt;audio&gt; et &lt;video&gt;</td></tr>
+                    <tr><td>&lt;track&gt;</td><td>Spécifie des pistes textuelles pour les éléments &lt;audio&gt; et &lt;video&gt;</td></tr>
+                    <tr><td>&lt;canvas&gt;</td><td>Conteneur pour graphiques dessinés avec JavaScript</td></tr>
+                    <tr><td>&lt;svg&gt;</td><td>Définit des graphiques vectoriels en SVG</td></tr>
+                    <tr><td>&lt;map&gt;</td><td>Définit une carte d'image</td></tr>
+                    <tr><td>&lt;area&gt;</td><td>Définit une zone sur une carte d'image</td></tr>
+                    <tr><td>&lt;figcaption&gt;</td><td>Légende d'un élément &lt;figure&gt;</td></tr>
+                    <tr><td>&lt;figure&gt;</td><td>Conteneur pour du contenu illustratif (images, diagrammes, etc.)</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Éléments de formulaire</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>&lt;form&gt;</td><td>Conteneur pour les éléments de formulaire</td></tr>
+                    <tr><td>&lt;input&gt;</td><td>Champ de saisie générique</td></tr>
+                    <tr><td>&lt;textarea&gt;</td><td>Zone de texte multiligne</td></tr>
+                    <tr><td>&lt;button&gt;</td><td>Bouton cliquable</td></tr>
+                    <tr><td>&lt;select&gt;</td><td>Liste déroulante</td></tr>
+                    <tr><td>&lt;option&gt;</td><td>Élément d'une liste déroulante</td></tr>
+                    <tr><td>&lt;label&gt;</td><td>Étiquette pour un élément de formulaire</td></tr>
+                    <tr><td>&lt;fieldset&gt;</td><td>Groupe de champs de formulaire</td></tr>
+                    <tr><td>&lt;legend&gt;</td><td>Légende pour un &lt;fieldset&gt;</td></tr>
+                    <tr><td>&lt;datalist&gt;</td><td>Liste de données prédéfinies pour les champs de saisie</td></tr>
+                    <tr><td>&lt;output&gt;</td><td>Résultat d'un calcul</td></tr>
+                    <tr><td>&lt;progress&gt;</td><td>Barre de progression</td></tr>
+                    <tr><td>&lt;meter&gt;</td><td>Indicateur de mesure</td></tr>
+                    <tr><td>&lt;optgroup&gt;</td><td>Groupe d'options dans une liste déroulante</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Éléments de tableau</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>&lt;table&gt;</td><td>Conteneur de tableau</td></tr>
+                    <tr><td>&lt;caption&gt;</td><td>Légende d'un tableau</td></tr>
+                    <tr><td>&lt;thead&gt;</td><td>Regroupe l'en-tête d'un tableau</td></tr>
+                    <tr><td>&lt;tbody&gt;</td><td>Regroupe le corps d'un tableau</td></tr>
+                    <tr><td>&lt;tfoot&gt;</td><td>Regroupe le pied d'un tableau</td></tr>
+                    <tr><td>&lt;tr&gt;</td><td>Ligne de tableau</td></tr>
+                    <tr><td>&lt;th&gt;</td><td>Cellule d'en-tête</td></tr>
+                    <tr><td>&lt;td&gt;</td><td>Cellule de données</td></tr>
+                    <tr><td>&lt;col&gt;</td><td>Spécifie des propriétés de colonne pour chaque colonne dans un &lt;colgroup&gt;</td></tr>
+                    <tr><td>&lt;colgroup&gt;</td><td>Spécifie un groupe de colonnes dans un tableau</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Éléments sémantiques</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>&lt;time&gt;</td><td>Représente une date ou une heure</td></tr>
+                    <tr><td>&lt;mark&gt;</td><td>Met en évidence du texte</td></tr>
+                    <tr><td>&lt;summary&gt;</td><td>Résumé pour un élément &lt;details&gt;</td></tr>
+                    <tr><td>&lt;details&gt;</td><td>Contenu que l'utilisateur peut afficher ou masquer</td></tr>
+                    <tr><td>&lt;data&gt;</td><td>Associe une valeur machine-readable avec du contenu</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Éléments interactifs</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Balise</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>&lt;dialog&gt;</td><td>Fenêtre de dialogue modale ou non modale</td></tr>
+                    <tr><td>&lt;menu&gt;</td><td>Liste de commandes ou de contrôles</td></tr>
+                    <tr><td>&lt;menuitem&gt;</td><td>Élément d'un menu contextuel</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mémo HTML5</p>
+    </footer>
+</body>
+</html>
